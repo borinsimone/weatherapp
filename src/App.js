@@ -15,8 +15,8 @@ function App() {
     console.log('resize');
   }, []);
   const [location, setLocation] = useState(null);
-
-  let url = `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_API_KEY}&q=${location}`;
+  let key = process.env.REACT_APP_API_KEY;
+  let url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${location}`;
 
   const [response, setResponse] = useState(null);
 

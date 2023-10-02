@@ -4,7 +4,6 @@ import Location from './components/Location';
 import Weather from './components/Weather';
 import axios from 'axios';
 import { AnimatePresence, motion } from 'framer-motion';
-import GlobalStyle from './styles/GlobalStyles';
 
 function App() {
   useEffect(() => {
@@ -37,7 +36,6 @@ function App() {
   useEffect(() => {
     if (location !== null) {
       getWeather();
-      // setResponse(test);
     }
   }, [location]);
 

@@ -41,7 +41,6 @@ function App() {
 
   return (
     <Container>
-      <div onClick={console.log(url)}>test</div>
       <AnimatePresence mode='wait'>
         {!response ? (
           <Location

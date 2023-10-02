@@ -16,7 +16,7 @@ function App() {
   }, []);
   const [location, setLocation] = useState(null);
   let key = process.env.REACT_APP_API_KEY;
-  let url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${location}`;
+  let url = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${location}`;
 
   const [response, setResponse] = useState(null);
 
@@ -41,6 +41,7 @@ function App() {
 
   return (
     <Container>
+      <div onClick={console.log(url)}>test</div>
       <AnimatePresence mode='wait'>
         {!response ? (
           <Location

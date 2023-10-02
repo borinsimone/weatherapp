@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Location from './components/Location';
 import Weather from './components/Weather';
 import axios from 'axios';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   useEffect(() => {
@@ -15,8 +15,8 @@ function App() {
     console.log('resize');
   }, []);
   const [location, setLocation] = useState(null);
-  let key = '3c011a98be064af8b83152753232709';
-  let url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${location}`;
+
+  let url = `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_API_KEY}&q=${location}`;
 
   const [response, setResponse] = useState(null);
 
